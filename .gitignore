@@ -15,7 +15,6 @@ venv/
 # local only folders
 local_only/
 
-vectorstore/*.pkl
 # Distribution / packaging
 build/
 dist/
