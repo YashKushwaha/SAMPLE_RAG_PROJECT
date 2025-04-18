@@ -5,7 +5,6 @@ from langchain.document_loaders import DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 from embed import embed_documents, save_embeddings,VECTOR_STORE_PATH, MODEL_NAME
-from retriever import load_embeddings, retrieve
 
 def ingest_documents(data_path: str, chunk_size=500, chunk_overlap=100):
     loader = DirectoryLoader(data_path, glob='**/*.txt')

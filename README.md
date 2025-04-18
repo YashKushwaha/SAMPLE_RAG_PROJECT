@@ -3,7 +3,7 @@
 This is a simple Retrieval-Augmented Generation (RAG) application that uses:
 
 - 🔍 `all-MiniLM-L6-v2` from `sentence-transformers` for generating dense embeddings
-- 🗃️ A local vector store (currently a pickled file) to store document embeddings
+- 🗃️ A local vector store (using the FAISS library) to store document embeddings
 - 🤖 `phi4` model served locally via [Ollama](https://ollama.com/) for question-answering
 
 ---
@@ -94,7 +94,6 @@ uvicorn src.api:app --host 0.0.0.0 --port 8000
 
 ## 📈 Planned Improvements
 
-- Replace pickle-based vector store with a scalable one like FAISS or Chroma
 - Add document chunking strategies
 - Include file upload for dynamic ingestion
 - Add frontend UI (e.g., Streamlit or React)
